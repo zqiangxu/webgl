@@ -39,4 +39,18 @@ WebGL 需要两种着色器: `顶点着色器` 和 `片元着色器`。
 
 1、顶点着色器指定了点的位置和大小。
 
+```c
+void main() {
+    gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
+    gl_PointSize = 20.0;
+}
+```
+
 2、片元着色器指定了点的颜色。
+```c
+void main() {
+    gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+}
+```
+
+着色器使用类似 C 的 `OpenGL ES 着色器语言 (GLSL ES)` 来编写。
