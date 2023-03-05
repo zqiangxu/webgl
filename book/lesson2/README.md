@@ -42,3 +42,7 @@ gl.clearColor(1.0, 0.0, 0.0, 1.0);
 (1)、gl.DEPTH_BUFFER_BIT: 深度缓冲区。
 
 (2)、gl.STENCIL_BUFFER_BIT: 模板缓冲区。
+
+## 绘制结果
+
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson2/result.png?raw=true" width="400px"/>
