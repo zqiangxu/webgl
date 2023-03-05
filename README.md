@@ -22,3 +22,5 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 1、[使用 Canvas 绘制一个矩形](./book/lesson1/)
 
 2、[WebGL 程序入门：清空绘图区](./book/lesson2/)
+
+3、[绘制一个点](./book/lesson3/)
