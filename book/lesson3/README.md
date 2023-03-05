@@ -58,6 +58,7 @@ void main() {
 ## 初始化着色器
 
 在初始化着色器前，顶点着色器 和 片元着色器 都是空白的，我们需要将以字符串形式的着色器代码从 JavaScript 传给 WebGL，并建立着色器。
+
 <img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson3/init.png?raw=true" width="800px"/>
 
 着色器建立好后，顶点着色器先执行，它先对 `gl_Position` 和 `gl_PointSize` 进行赋值，并将他们传给 片元着色器，然后片元着色器再执行。
