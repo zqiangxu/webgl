@@ -34,3 +34,9 @@ WebGL 需要两种着色器: `顶点着色器` 和 `片元着色器`。
 调用 WebGL 相关的方法，顶点着色器 和 片元着色器 就会执行，在颜色缓冲区中进行绘制，此时就清空了绘图区，最后，颜色缓冲区的内容会自动在浏览器中的 canvas 中进行展示。
 
 <img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson3/process.png?raw=true" width="800px"/>
+
+可以看到如果需要在屏幕上绘制一个 10px 红色的点，它需要用到两种着色器：
+
+1、顶点着色器指定了点的位置和大小。
+
+2、片元着色器指定了点的颜色。
