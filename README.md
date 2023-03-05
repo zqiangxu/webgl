@@ -8,7 +8,7 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 
 `WebGL` 实际上是 OpenGL 的一个特殊的版本 `OpenGL ES` 中派生出来的，OpenGL ES 于 2003 - 2004 年被首次提出，并在 2007 年 (ES 2.0) 和 2012 年 (ES 3.0) 进行了两次升级。WebGL 是基于 ES 2.0 的。 
 
-![relations](./assets/book/relations.png)
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/relations.png?raw=true" />
 
 从 OpenGL 2.0 开始，支持了一项非常重要的特性，可编程的着色器方法 (programmable shader functions)，该特性被 OpenGL ES2.0 继承，并成为 WebGL 1.0 标准的核心部分。
 
