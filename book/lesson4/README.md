@@ -6,4 +6,4 @@
 
 WebGL 坐标映射：
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson4/coordinate.png?raw=true" width="400px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson4/coordinate-system.png?raw=true" width="400px"/>
