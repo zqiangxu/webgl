@@ -28,3 +28,5 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 4、[WebGL坐标系统](./book/lesson4/)
 
 5、[attribute变量 和 uniform变量](./book/lesson5/)
+
+6、[attribute变量实战: 鼠标点击绘制点](./book/lesson6/)
