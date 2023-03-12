@@ -38,3 +38,7 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 1、[UBO](./book/appendix/ubo/)
 
 2、[WebGL 与 离屏Canvas 结合](./book/appendix/offscreencanvas/)
+
+## 学习资料
+
+1、[LearnOpenGL-CN](https://learnopengl-cn.readthedocs.io/zh/latest/)
