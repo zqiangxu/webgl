@@ -30,3 +30,11 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 5、[attribute变量 和 uniform变量](./book/lesson5/)
 
 6、[attribute变量实战: 鼠标点击绘制点](./book/lesson6/)
+
+## 附录
+
+临时目录，后续再迁移到正文。
+
+1、[UBO](./book/appendix/ubo/)
+
+2、[WebGL 与 离屏Canvas 结合](./book/appendix/offscreencanvas/)
