@@ -20,7 +20,8 @@
 4、可以在不同的着色语言程序中通过更新 UBO 中的数据实现所有 uniform 类型变量的更新。
 
 ## 参考文章：
+1、[Uniform Buffer Object](https://www.khronos.org/opengl/wiki/Uniform_Buffer_Object)
 
-1、[事半功倍！巧用 WebGL 抓帧工具提高渲染效率](https://jishuin.proginn.com/p/763bfbd6a548)
+2、[事半功倍！巧用 WebGL 抓帧工具提高渲染效率](https://jishuin.proginn.com/p/763bfbd6a548)
 
-2、[WebGL 与 WebGPU比对[4] – Uniform](https://www.dianjilingqu.com/64108.html)
+3、[WebGL 与 WebGPU比对[4] – Uniform](https://www.dianjilingqu.com/64108.html)
