@@ -50,13 +50,13 @@
         gl.clearColor(0.0, 0.0, 0.0, 1.0);
         gl.clear(gl.COLOR_BUFFER_BIT);
         
-        const materialUBO = gl.createBuffer();
+        const settingUBO = gl.createBuffer();
         const color = new Float32Array([1.0, 0.6, 0.1, 1.0]);
 
-        gl.bindBuffer(gl.UNIFORM_BUFFER, materialUBO);
+        gl.bindBuffer(gl.UNIFORM_BUFFER, settingUBO);
         gl.bufferData(gl.UNIFORM_BUFFER, color, gl.DYNAMIC_DRAW);
         gl.bindBuffer(gl.UNIFORM_BUFFER, null);
-        gl.bindBufferBase(gl.UNIFORM_BUFFER, 0, materialUBO);
+        gl.bindBufferBase(gl.UNIFORM_BUFFER, 0, settingUBO);
 
         // 绘制一个顶点
         gl.drawArrays(gl.POINTS, 0, 1);
