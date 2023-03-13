@@ -31,6 +31,8 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 
 6、[attribute变量实战: 鼠标点击绘制点](./book/lesson6/)
 
+7、[uniform变量实战: 改变颜色](./book/lesson7/)
+
 ## 附录
 
 临时目录，后续再迁移到正文。
