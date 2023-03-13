@@ -11,41 +11,52 @@
     <canvas id="canvas" width="400" height="400" />
 
     <!-- 顶点着色器 -->
-    <script id="shader-vs" type="x-shader/x-vertex">
-    attribute vec4 a_Position;
-    void main() {
-        gl_Position = a_Position;
+    <script id="shader-vs" type="x-shader/x-vertex">#version 300 es
+    void main(void) {
         gl_PointSize = 10.0;
-    }    
+        gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
+    }
     </script>
 
     <!-- 片元着色器 -->
-    <script id="shader-fs" type="x-shader/x-fragment">
+    <script id="shader-fs" type="x-shader/x-fragment">#version 300 es
     precision mediump float;
-    uniform vec4 u_FragColor;
-    void main() {
-        gl_FragColor = u_FragColor;
+    layout (std140) uniform Settings {
+        vec4 color;
+    };
+
+    out vec4 finalColor;
+
+    void main(void) {
+        finalColor = color;
     }
     </script>
 
     <script type="text/javascript">
         const canvas = document.getElementById('canvas');
-        const gl = canvas.getContext('webgl');
 
-        const vShader = document.getElementById('shader-vs').innerHTML;
-        const fShader = document.getElementById('shader-fs').innerHTML;
+        // WebGL2RenderingContext
+        const gl = canvas.getContext("webgl2");
+
+        const vShaderSource = document.getElementById('shader-vs').innerHTML;
+        const fShaderSource = document.getElementById('shader-fs').innerHTML;
 
         // 初始化着色器
-        initShaders(gl, vShader, fShader);
+        initShaders(gl, vShaderSource, fShaderSource);
 
-        const a_Position = gl.getAttribLocation(gl.program, 'a_Position');
-        gl.vertexAttrib3f(a_Position, 0.0, 0.0, 0.0);
-
-        const u_FragColor = gl.getUniformLocation(gl.program, 'u_FragColor');
-        gl.uniform4f(u_FragColor, 0.0, 1.0, 0.0, 1.0);
+        const blockIndexVS = gl.getUniformBlockIndex(gl.program, 'Settings');
+        gl.uniformBlockBinding(gl.program, blockIndexVS, 0);
 
         gl.clearColor(0.0, 0.0, 0.0, 1.0);
         gl.clear(gl.COLOR_BUFFER_BIT);
+        
+        const materialUBO = gl.createBuffer();
+        const color = new Float32Array([1.0, 0.6, 0.1, 1.0]);
+
+        gl.bindBuffer(gl.UNIFORM_BUFFER, materialUBO);
+        gl.bufferData(gl.UNIFORM_BUFFER, color, gl.DYNAMIC_DRAW);
+        gl.bindBuffer(gl.UNIFORM_BUFFER, null);
+        gl.bindBufferBase(gl.UNIFORM_BUFFER, 0, materialUBO);
 
         // 绘制一个顶点
         gl.drawArrays(gl.POINTS, 0, 1);
