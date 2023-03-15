@@ -79,7 +79,7 @@ gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
 ```javascript
 gl.bindBuffer(target, buffer);
 ```
-其中：`buffer` 支持 `gl.ARRAY_BUFFER`、`gl.ELEMENT_ARRAY_BUFFER`。
+其中：`buffer` 支持 `gl.ARRAY_BUFFER`、`gl.ELEMENT_ARRAY_BUFFER` (WebGL1.0)。
 
 | buffer | 说明 |
 |  ----  | ---- |
@@ -106,7 +106,7 @@ gl.bufferData(target, data, usage);
 参数说明: 
 | 参数 | 说明 |
 |  ----  | ---- |
-| target | gl.ARRAY_BUFFER 或 gl.ELEMENT_ARRAY_BUFFER |
+| target | gl.ARRAY_BUFFER 或 gl.ELEMENT_ARRAY_BUFFER  (WebGL1.0) |
 | data | 表示需要写入缓冲区的数据 |
 | usage | 表示程序将如何使用存储在缓冲区对象中的数据，该参数主要用于帮助 WebGL 进行内部优化 |
 
@@ -121,4 +121,39 @@ gl.bufferData(target, data, usage);
 写入完成后系统内部的状态变成了下图所示：
 <img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson8/buffer-data.png?raw=true" width="800px"/>
 
+
+### 4、将缓冲区对象分配给一个 attribute 变量
+
+使用 `gl.vertexAttrib[1234]f` 一次只能向 attribute 分配(传输) 一个值。而如果需要将数组中的所有值一次性分配给一个 attribute 变量，我们需要借助 `gl.vertexAttribPointer` 方法。
+
+如:
+
+```javascript
+gl.vertexAttribPointer(a_Position, 2, gl.FLOAT, false, 0, 0);
+```
+
+`gl.vertexAttribPointer` 的 API 如下：
+```javascript
+gl.vertexAttribPointer(location, size, type, normalized, stride, offset);
+```
+
+参数说明: 
+| 参数 | 说明 |
+|  ----  | ---- |
+| location | 指定待分配 attribute 变量的存储位置 |
+| size | 指定缓冲区中的每个顶点的分量个数 (1->4)，对应 gl.vertexAttrib[1234]f |
+| type | 数据格式 |
+| normalized | 布尔值，表示是否将非浮点数的数据归一到 [0,1] 或 [-1, 1]区间 |
+| stride | 指定两个相邻的顶点间的字节数，默认为 0 |
+| offset | 指定缓冲区对象中的偏移量（以字节为单位），即 attribute 变量从缓冲区的何处开始存储，如果是起始位置则为 0 |
+
+type 的详细说明:
+| type | 说明 |
+|  ----  | ---- |
+| gl.UNSIGNED_BYTE | 无符号字节, Uint8Array |
+| gl.SHORT | 短整型, Int16Array |
+| gl.UNSIGNED_SHORT | 无符号短整型, Uint16Array |
+| gl.INT | 整形, Int32Array |
+| gl.UNSIGNED_INT | 无符号整形, Uint32Array |
+| gl.FLOAT | 浮点型, Float32Array |
 
