@@ -28,4 +28,8 @@ WebGL 提供了一种很方便的机制，即 `缓冲区对象 (Buffer Object)`�
 
 它可以一次性地向着色器传入多个顶点的数据。它是 WebGL 系统中的一块内存区域。
 
+## 使用缓冲区对象
 
+缓冲区对象是 WebGL 系统中一块存储区，我们可以在缓冲区对象中保存想要绘制的所有顶点数据，如图所示，我们需要先创建一个缓冲区，然后向其中写入顶点数据，最后就可以一次性的向顶点着色器中传入多个顶点的 attribute 变量数据。
+
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson8/use-buffer.png?raw=true" width="800px"/>
