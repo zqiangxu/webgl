@@ -75,7 +75,7 @@ const vertexBuffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
 ```
 
-对应的 API 为: 
+完整 API 为: 
 ```javascript
 gl.bindBuffer(target, buffer);
 ```
@@ -85,4 +85,40 @@ gl.bindBuffer(target, buffer);
 |  ----  | ---- |
 | gl.ARRAY_BUFFER | 表示缓冲区对象中包含了顶点的数据 |
 | gl.ELEMENT_ARRAY_BUFFER | 表示缓冲区对象中包含了顶点的索引值 |
+
+执行完成后，WebGL 系统内部状态发生了改变。
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson8/bind-buffer.png?raw=true" width="800px"/>
+
+### 3、向缓冲区中写入数据
+
+我们不能直接向缓冲区中写入数据，只能向 `目标` 写入数据，所以要想向缓冲区写入数据，就必须先执行上一步的绑定操作。
+
+```javascript
+gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
+```
+这个方法表示：将第二个参数的 vertices 中的数据写入了绑定到第一个参数 gl.ARRAY_BUFFER 上的缓冲区对象。
+
+完整的 API 为:
+```javascript
+gl.bufferData(target, data, usage);
+```
+
+参数说明: 
+| 参数 | 说明 |
+|  ----  | ---- |
+| target | gl.ARRAY_BUFFER 或 gl.ELEMENT_ARRAY_BUFFER |
+| data | 表示需要写入缓冲区的数据 |
+| usage | 表示程序将如何使用存储在缓冲区对象中的数据，该参数主要用于帮助 WebGL 进行内部优化 |
+
+其中 `usage` 支持：
+| 类型 | 说明 |
+|  ----  | ---- |
+| gl.STATIC_DRAW | 只会向缓冲区对象中写入一次数据，但需要绘制多次 |
+| gl.STREAM_DRAW | 只会向缓冲区对象中写入一次数据，然后绘制多次 |
+| gl.DYNAMIC_DRAW | 会向缓冲区对象中多次写入数据，并绘制很多次 |
+
+
+写入完成后系统内部的状态变成了下图所示：
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson8/buffer-data.png?raw=true" width="800px"/>
+
 
