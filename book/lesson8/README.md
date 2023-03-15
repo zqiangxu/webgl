@@ -50,7 +50,7 @@ WebGL 提供了一种很方便的机制，即 `缓冲区对象 (Buffer Object)`�
 
 <img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson8/steps.png?raw=true" width="800px"/>
 
-### 一、创建缓冲区对象
+### 1、创建缓冲区对象
 
 执行 `gl.createBuffer()` 之后，WebGL 系统中就多出了一个新创建的缓冲区对象，如下图所示： 
 ```javascript
@@ -67,4 +67,22 @@ const vertexBuffer = gl.createBuffer();
 
 创建后的缓冲区可以通过 `gl.deleteBuffer(buffer)` 删除掉。
 
+### 2、绑定缓冲区
+
+将缓冲区对象绑定到 WebGL 系统中已经存在的目标上，这个目标表示缓冲区的用途（在这里就是向顶点着色器提供传给 attribute 变量的数据），这样 WebGL 才能正确处理其中的数据。
+
+```javascript
+gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+```
+
+对应的 API 为: 
+```javascript
+gl.bindBuffer(target, buffer);
+```
+其中：`buffer` 支持 `gl.ARRAY_BUFFER`、`gl.ELEMENT_ARRAY_BUFFER`。
+
+| buffer | 说明 |
+|  ----  | ---- |
+| gl.ARRAY_BUFFER | 表示缓冲区对象中包含了顶点的数据 |
+| gl.ELEMENT_ARRAY_BUFFER | 表示缓冲区对象中包含了顶点的索引值 |
 
