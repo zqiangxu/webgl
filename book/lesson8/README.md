@@ -157,3 +157,20 @@ type 的详细说明:
 | gl.UNSIGNED_INT | 无符号整形, Uint32Array |
 | gl.FLOAT | 浮点型, Float32Array |
 
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson8/attrib-pointer.png?raw=true" width="800px"/>
+
+### 5、开启 attribute 变量
+
+为了让顶点着色器能够访问到缓冲区内的数据，我们还需要使用 `gl.enableVertexAttribArray()` 方法来开启 attribute 变量。一旦开启，缓冲区对象和 attribute 变量之间的链接就是真正建立起来了。
+
+示例:
+```javascript
+gl.enableVertexAttribArray(a_Position);
+```
+
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson8/enable.png?raw=true" width="800px"/>
+
+需要注意的是：**函数的名称虽然似乎表示用来处理 `顶点数组` 的，但是实际确是处理缓冲区的**。
+
+同样我们可以使用 `gl.disableVertexAttribArray()` 来关闭分配。 
+
