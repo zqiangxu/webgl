@@ -21,3 +21,7 @@ gl.drawArrays 通过第一个参数就可以以不同的方式绘制图形。它
 | 三角形 | gl.TRIANGLES | 一系列单独的三角形，绘制在 (v0, v1, v2), (v3, v4, v5) ...，如果点的个数不是3的整数倍，多余的会被忽略 |
 | 三角带 | gl.TRIANGLE_STRIP | 一系列带状的三角形，绘制在 (v0, v1, v2), (v2, v1, v3), (v2, v3, v4) .... , **注意点的顺序**|
 | 三角扇 | gl.TRIANGLE_FAN | 一系列三角形组成的类似扇形的图形，绘制在 (v0, v1, v2), (v0, v2, v3), (v0, v3, v4)... |
+
+通过下面的图我们可以更容易理解：
+
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson10/mode.png?raw=true" width="800px"/>
