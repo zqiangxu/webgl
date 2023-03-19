@@ -20,7 +20,7 @@ gl.drawArrays 通过第一个参数就可以以不同的方式绘制图形。它
 | 回路 | gl.LINE_LOOP | 一系列连接的线段，绘制在 (v0, v1), (v1, v2), (v2, v3), ...(vn-1, vn), (vn, v0)，相比较上一个它的首尾是相连的 |
 | 三角形 | gl.TRIANGLES | 一系列单独的三角形，绘制在 (v0, v1, v2), (v3, v4, v5) ...，如果点的个数不是3的整数倍，多余的会被忽略 |
 | 三角带 | gl.TRIANGLE_STRIP | 一系列带状的三角形，绘制在 (v0, v1, v2), (v2, v1, v3), (v2, v3, v4) .... , **注意点的顺序**|
-| 三角扇 | gl.TRIANGLE_FAN | 一系列三角形组成的类似扇形的图形，绘制在 (v0, v1, v2), (v0, v2, v3), (v0, v3, v4)... |
+| 三角扇 | gl.TRIANGLE_FAN | 一系列三角形组成的类似扇形的图形，绘制在 (v0, v1, v2), (v0, v2, v3), (v0, v3, v4)... **注意点的顺序** |
 
 通过下面的图我们可以更容易理解：
 
@@ -32,3 +32,7 @@ gl.drawArrays 通过第一个参数就可以以不同的方式绘制图形。它
 例如下面两种坐标绘制出来的图形是不一样的。
 
 <img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson10/triangle-strip.png?raw=true" width="800px"/>
+
+同样的 `gl.TRIAvGLE_FAN` 也需要注意顺序。
+
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson10/triangle-fan.png?raw=true" width="800px"/>
