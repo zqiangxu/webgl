@@ -25,3 +25,10 @@ gl.drawArrays 通过第一个参数就可以以不同的方式绘制图形。它
 通过下面的图我们可以更容易理解：
 
 <img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson10/mode.png?raw=true" width="800px"/>
+
+## gl.TRIANGLE_STRIP 的特别说明
+
+使用 `gl.TRIANGLE_STRIP` 的时候需要特别注意绘制的顺序：`(v0, v1, v2), (v2, v1, v3), (v2, v3, v4) ....`。
+例如下面两种坐标绘制出来的图形是不一样的。
+
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson10/triangle-strip.png?raw=true" width="800px"/>
