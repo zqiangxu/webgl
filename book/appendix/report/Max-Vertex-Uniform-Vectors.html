@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../utils/initShaders.js"></script>
+    <title>WebGL lesson5</title>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="400" />
+
+    <!-- 顶点着色器 -->
+    <script id="shader-vs" type="x-shader/x-vertex">#version 300 es
+        uniform vec4 a_Position[1000];
+        uniform vec4 a_Position_1[24];
+        void main() {
+                gl_Position = a_Position[0];
+                gl_PointSize = 10.0;
+        }
+    </script>
+
+    <!-- 顶点着色器 -->
+    <script id="shader-vs-2" type="x-shader/x-vertex">#version 300 es
+        uniform vec4 a_Position_2[1000];
+        uniform vec4 a_Position_3[24];
+
+        uniform vec4 a_Position_4[10];
+        
+        void main() {
+                gl_Position = a_Position_2[0];
+                gl_PointSize = 10.0;
+        }
+    </script>
+
+    <!-- 片元着色器 -->
+    <script id="shader-fs" type="x-shader/x-fragment">#version 300 es
+        precision mediump float;
+        uniform vec4 u_FragColor;
+        out vec4 fragColor;
+        void main() {
+                fragColor = u_FragColor;
+        }
+    </script>
+
+    <script type="text/javascript">
+        const canvas = document.getElementById('canvas');
+
+        // WebGL2RenderingContext
+        const gl = canvas.getContext("webgl2");
+
+        const vShaderSource = document.getElementById('shader-vs').innerHTML;
+        const vShaderSource2 = document.getElementById('shader-vs-2').innerHTML;
+        const fShaderSource = document.getElementById('shader-fs').innerHTML;
+
+        // 初始化着色器
+        initShaders(gl, vShaderSource, fShaderSource);
+        initShaders(gl, vShaderSource2, fShaderSource);
+    </script>
+</body>
+</html>

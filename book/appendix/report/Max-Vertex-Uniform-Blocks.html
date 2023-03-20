@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../utils/initShaders.js"></script>
+    <title>WebGL lesson5</title>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="400" />
+
+    <!-- 顶点着色器 -->
+    <script id="shader-vs" type="x-shader/x-vertex">#version 300 es
+        layout (std140) uniform Settings {
+            vec4 color;
+        };
+        
+        layout (std140) uniform Settings1 {
+            vec4 color;
+        } Setting1;
+        
+        layout (std140) uniform Settings2 {
+            vec4 color;
+        } Setting2;
+        
+        layout (std140) uniform Settings3 {
+            vec4 color;
+        } Setting3;
+        
+        layout (std140) uniform Settings4 {
+            vec4 color;
+        } Setting4;
+        
+        layout (std140) uniform Settings5 {
+            vec4 color;
+        } Setting5;
+
+        layout (std140) uniform Settings6 {
+            vec4 color;
+        } Setting6;
+        
+        
+        layout (std140) uniform Settings7 {
+            vec4 color;
+        } Setting7;
+        
+        layout (std140) uniform Settings8 {
+            vec4 color;
+        } Setting8;
+        
+        layout (std140) uniform Settings9 {
+            vec4 color;
+        } Setting9;
+        
+        layout (std140) uniform Settings10 {
+            vec4 color;
+        } Setting10;
+        
+        layout (std140) uniform Settings11 {
+            vec4 color;
+        } Setting11;
+        
+        layout (std140) uniform Settings12 {
+            vec4 color;
+        } Setting12;
+        
+        layout (std140) uniform Settings13 {
+            vec4 color;
+        } Setting13;
+        
+
+        layout (std140) uniform Settings14 {
+            vec4 color;
+        } Setting14;
+
+        layout (std140) uniform Settings15 {
+            vec4 color;
+        } Setting15;
+
+        layout (std140) uniform Settings16 {
+            vec4 color;
+        } Setting16;
+
+        void main() {
+                gl_Position = vec4(0.0, 0.0, 0.0, 0.0);
+                gl_PointSize = 10.0;
+        }
+    </script>
+
+    <!-- 顶点着色器 -->
+    <script id="shader-vs-2" type="x-shader/x-vertex">#version 300 es
+        uniform vec4 a_Position_1;
+        void main() {
+                gl_Position = a_Position_1;
+                gl_PointSize = 10.0;
+        }
+    </script>
+
+    <!-- 片元着色器 -->
+    <script id="shader-fs" type="x-shader/x-fragment">#version 300 es
+        precision mediump float;
+        uniform vec4 u_FragColor;
+        out vec4 fragColor;
+        void main() {
+                fragColor = u_FragColor;
+        }
+    </script>
+
+    <script type="text/javascript">
+        const canvas = document.getElementById('canvas');
+
+        // WebGL2RenderingContext
+        const gl = canvas.getContext("webgl2");
+
+        const vShaderSource = document.getElementById('shader-vs').innerHTML;
+        const vShaderSource2 = document.getElementById('shader-vs-2').innerHTML;
+        const fShaderSource = document.getElementById('shader-fs').innerHTML;
+
+        // 初始化着色器
+        initShaders(gl, vShaderSource, fShaderSource);
+        initShaders(gl, vShaderSource2, fShaderSource);
+    </script>
+</body>
+</html>
