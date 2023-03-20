@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../utils/initShaders.js"></script>
+    <title>WebGL lesson5</title>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="400" />
+
+    <!-- 顶点着色器 -->
+    <script id="shader-vs" type="x-shader/x-vertex">#version 300 es
+        in vec4 a_Position;
+        in vec4 a_Position1;
+        in vec4 a_Position2;
+        in vec4 a_Position3;
+        in vec4 a_Position4;
+        in vec4 a_Position5;
+        in vec4 a_Position6;
+        in vec4 a_Position7;
+        in vec4 a_Position8;
+        in vec4 a_Position9;
+        in vec4 a_Position10;
+        in vec4 a_Position11;
+        in vec4 a_Position12;
+        in vec4 a_Position13;
+        in vec4 a_Position14;
+        in vec4 a_Position15;
+        in vec4 a_Position16;
+        in vec4 a_Position17;
+        in vec4 a_Position18;
+        in vec4 a_Position19;
+        in vec4 a_Position20;
+        
+        
+        void main() {
+                gl_Position = a_Position;
+                gl_PointSize = 10.0;
+        }
+    </script>
+
+    <!-- 片元着色器 -->
+    <script id="shader-fs" type="x-shader/x-fragment">#version 300 es
+        precision mediump float;
+        uniform vec4 u_FragColor;
+        out vec4 fragColor;
+        void main() {
+                fragColor = u_FragColor;
+        }
+    </script>
+
+    <script type="text/javascript">
+        const canvas = document.getElementById('canvas');
+
+        // WebGL2RenderingContext
+        const gl = canvas.getContext("webgl2");
+
+        const vShaderSource = document.getElementById('shader-vs').innerHTML;
+        const fShaderSource = document.getElementById('shader-fs').innerHTML;
+
+        // 初始化着色器
+        initShaders(gl, vShaderSource, fShaderSource);
+        initShaders(gl, vShaderSource, fShaderSource);
+    </script>
+</body>
+</html>
