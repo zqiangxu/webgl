@@ -63,6 +63,11 @@ void main() {
 
 然后在 JavaScript 中，我们可以通过 `gl.uniformMatrix4fv` 来传递一个矩阵。
 
+
+## 按列主序 和 按行主序
+
+与 GLSL ES 不同的是，JavaScript 并没有专门表示矩阵的类型，我们需要使用类型化数组 `Float32Array` 。
+
 ```javascript
 const u_Matrix = gl.getUniformLocation(gl.program, 'u_Matrix');
 
