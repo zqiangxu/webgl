@@ -45,3 +45,30 @@ $y'=xsin\beta+ycos\beta$
 
 而 z' = z。
 
+## 实现
+
+这里的实现就比较简单了，着色器的改动：
+
+```c++
+uniform float u_CosB;
+uniform float u_SinB;
+
+void main() {
+    gl_Position.x = a_Position.x * u_CosB - a_Position.y * u_SinB;
+    gl_Position.y = a_Position.x * u_SinB + a_Position.y * u_CosB;
+    gl_Position.z = a_Position.z;
+    gl_Position.w = 1.0;
+}
+```
+
+然后在 JavaScript 传递参数的时候，如果只是传递一个浮点数，可以通过 `gl.uniform1f` 进行传递。
+
+```javascript
+// 其中 angle 为旋转的角度，需要调整为弧度制。
+const radian = Math.PI * angle / 180.0;
+const cosB = Math.cos(radian);
+const sinB = Math.sin(radian);
+
+gl.uniform1f(u_CosB, cosB);
+gl.uniform1f(u_SinB, sinB);
+```
