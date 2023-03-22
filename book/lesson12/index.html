@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <button id="move">移动</button>
+    <button id="rotate">旋转</button>
+    <button id="animation">动画</button>
     <p></p>
     <canvas id="canvas" width="600" height="400" />
 
@@ -18,9 +19,14 @@
     <script id="shader-vs" type="x-shader/x-vertex">
     attribute vec4 a_Position;
 
-    uniform vec4 u_Translation;
+    uniform float u_CosB;
+    uniform float u_SinB;
+
     void main() {
-        gl_Position = a_Position + u_Translation;
+        gl_Position.x = a_Position.x * u_CosB - a_Position.y * u_SinB;
+        gl_Position.y = a_Position.x * u_SinB + a_Position.y * u_CosB;
+        gl_Position.z = a_Position.z;
+        gl_Position.w = 1.0;
     }
     </script>
 
@@ -66,19 +72,47 @@
         // 连接 a_Position 变量与分配给它的缓冲区对象
         gl.enableVertexAttribArray(a_Position);
 
+        const u_CosB = gl.getUniformLocation(gl.program, 'u_CosB');
+        const u_SinB = gl.getUniformLocation(gl.program, 'u_SinB');
+
+        // 默认为 0 度
+        gl.uniform1f(u_CosB, 1.0);
+        gl.uniform1f(u_SinB, 0.0);
+
+
         // 绘制一个三角形
         gl.drawArrays(gl.TRIANGLES, 0, 3);
 
+        let angle = 0;
+        let animated = false;
+        function rotate() {
+            angle += 5;
 
-        const u_Translation = gl.getUniformLocation(gl.program, 'u_Translation');
+            // 需要转化为弧度制
+            const radian = Math.PI * angle / 180.0;
+            const cosB = Math.cos(radian);
+            const sinB = Math.sin(radian);
 
-        document.getElementById('move').addEventListener('click', () => {
             gl.clearColor(0.0, 0.0, 0.0, 1.0);
             gl.clear(gl.COLOR_BUFFER_BIT);
 
-            gl.uniform4f(u_Translation, -0.2, -0.2, 0, 0);
+            gl.uniform1f(u_CosB, cosB);
+            gl.uniform1f(u_SinB, sinB);
             
-            gl.drawArrays(gl.TRIANGLES, 0, 3); 
+            gl.drawArrays(gl.TRIANGLES, 0, 3);
+            if (animated) {
+                requestAnimationFrame(rotate);
+            }
+        };
+
+        document.getElementById('rotate').addEventListener('click', () => {
+            animated = false;
+            rotate();
+        });
+
+        document.getElementById('animation').addEventListener('click', () => {
+            animated = true;
+            rotate();
         });
     </script>
 </body>
