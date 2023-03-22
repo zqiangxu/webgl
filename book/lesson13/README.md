@@ -49,3 +49,36 @@ y \\
 z
 \end{pmatrix}
 ```
+
+## 实现
+由于变换矩阵是 4*4 的，所以 GLSL 需要知道每个变量的类型，所以在着色器中我们可以通过 `mat4` 来声明一个 4*4 的矩阵。
+
+```c++ 
+attribute vec4 a_Position;
+uniform mat4 u_Matrix;
+void main() {
+    gl_Position = a_Position * u_Matrix;
+}
+```
+
+然后在 JavaScript 中，我们可以通过 `gl.uniformMatrix4fv` 来传递一个矩阵。
+
+```javascript
+const u_Matrix = gl.getUniformLocation(gl.program, 'u_Matrix');
+
+function getMatrix(cosB, sinB) {
+    return new Float32Array([
+        cosB, sinB, 0.0, 0.0,
+        -sinB, cosB, 0.0, 0.0,
+        0.0, 0.0, 1.0, 0.0,
+        0.0, 0.0, 0.0, 1.0,
+    ]);
+}
+
+// 需要转化为弧度制，其中 angle 为角度
+const radian = Math.PI * angle / 180.0;
+const cosB = Math.cos(radian);
+const sinB = Math.sin(radian);
+
+gl.uniformMatrix4fv(u_Matrix, false, getMatrix(cosB, sinB));
+```
