@@ -83,7 +83,7 @@ $$
 $$
 
 ### 按列主序
-```math
+$$
 \left(
     \begin{array}{c|c|c|c}
       a&b&c&d\\
@@ -92,7 +92,7 @@ $$
       m&n&o&p
     \end{array}
 \right)
-```
+$$
 
 ```javascript
 const u_Matrix = gl.getUniformLocation(gl.program, 'u_Matrix');
