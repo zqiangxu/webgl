@@ -72,24 +72,26 @@ void main() {
 
 ### 按行主序
 ```math
-\left[
-    \begin{array}{c|c|c|c}
-      a&b&c&d\\
-      e&f&g&h\\
-      i&j&k&l\\
-      m&n&o&p\\
+\left(
+    \begin{array}
+      \hline a&b&c&d\\
+      \hline e&f&g&h\\
+      \hline i&j&k&l\\
+      \hline m&n&o&p
     \end{array}
-\right]
+\right)
 ```
 
 ### 按列主序
 ```math
-\begin{pmatrix}{c|c|c|c}
-a & b & c & d \\
-e & f & g & h \\
-i & j & k & l \\
-m & n & o & p \\
-\end{pmatrix}
+\left(
+    \begin{array}{c|c|c|c}
+      a&b&c&d\\
+      e&f&g&h\\
+      i&j&k&l\\
+      m&n&o&p
+    \end{array}
+\right)
 ```
 
 ```javascript
