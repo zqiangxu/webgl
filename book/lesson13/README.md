@@ -96,10 +96,12 @@ $$
 
 而 WebGL 和 OpenGL 一样，矩阵元素是 [**按列主序**] 存储在数据中的，也就是在数组中的表现应该是 [a, e, i, m, b, f, j, n, c, g, k, o, d, h, l, p]。
 
+所以在编写代码的时候我们需要特别小心书写的顺序。
 ```javascript
 const u_Matrix = gl.getUniformLocation(gl.program, 'u_Matrix');
 
 function getMatrix(cosB, sinB) {
+    // 注意是按列主序
     return new Float32Array([
         cosB, sinB, 0.0, 0.0,
         -sinB, cosB, 0.0, 0.0,
