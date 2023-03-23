@@ -71,16 +71,16 @@ void main() {
 我们知道数组是一维的，而矩阵是二维的，这里我们可以采用两种方式存储矩阵元素：**按行主序** 和 **按列主序**。
 
 ### 按行主序
-```math
+$$
 \left(
-    \begin{array}
-      \hline a&b&c&d\\
+    \begin{matrix}
+             a&b&c&d\\
       \hline e&f&g&h\\
       \hline i&j&k&l\\
       \hline m&n&o&p
-    \end{array}
+    \end{matrix}
 \right)
-```
+$$
 
 ### 按列主序
 ```math
