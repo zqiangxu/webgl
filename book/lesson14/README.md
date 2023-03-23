@@ -8,7 +8,7 @@ $y'= y + Ty$
 
 $z' = z + Tz$
 
-而根据矩阵的乘法，我们很容易利用矩阵实现这个能力：
+而根据矩阵的乘法，平移操作的变换矩阵为：
 
 $$
 \begin{pmatrix}
@@ -47,20 +47,18 @@ void main() {
 ```javascript
 const u_Matrix = gl.getUniformLocation(gl.program, 'u_Matrix');
 
-function getMatrix(cosB, sinB) {
+function getMatrix(tx, ty, tz) {
     // 注意是按列主序
-    return new Float32Array([
-        cosB, sinB, 0.0, 0.0,
-        -sinB, cosB, 0.0, 0.0,
-        0.0, 0.0, 1.0, 0.0,
-        0.0, 0.0, 0.0, 1.0,
-    ]);
+    function getMatrix(tx, ty, tz) {
+        return new Float32Array([
+            1.0, 0.0, 0.0, tx,
+            0.0, 1.0, 0.0, ty,
+            0.0, 0.0, 1.0, tz,
+            0.0, 0.0, 0.0, 1.0,
+        ]);
+    }
 }
 
-// 需要转化为弧度制，其中 angle 为角度
-const radian = Math.PI * angle / 180.0;
-const cosB = Math.cos(radian);
-const sinB = Math.sin(radian);
-
-gl.uniformMatrix4fv(u_Matrix, false, getMatrix(cosB, sinB));
+// 其中 distanceX 为 X轴方向平移的距离
+gl.uniformMatrix4fv(u_Matrix, false, getMatrix(distanceX, 0, 0));
 ```
