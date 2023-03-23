@@ -68,6 +68,28 @@ void main() {
 
 与 GLSL ES 不同的是，JavaScript 并没有专门表示矩阵的类型，我们需要使用类型化数组 `Float32Array` 。
 
+我们知道数组是一维的，而矩阵是二维的，这里我们可以采用两种方式存储矩阵元素：**按行主序** 和 **按列主序**。
+
+### 按行主序
+```math
+\begin{pmatrix}
+a & b & c & d \\
+\hline e & f & g & h \\
+\hline i & j & k & l \\
+\hline m & n & o & p \\
+\end{pmatrix}
+```
+
+### 按列主序
+```math
+\begin{pmatrix}{c|c|c|c}
+a & b & c & d \\
+e & f & g & h \\
+i & j & k & l \\
+m & n & o & p \\
+\end{pmatrix}
+```
+
 ```javascript
 const u_Matrix = gl.getUniformLocation(gl.program, 'u_Matrix');
 
