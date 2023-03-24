@@ -51,6 +51,8 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 
 16、[将非坐标数据传入顶点着色器](./book/lesson16/)
 
+17、[gl.vertexAttribPointer() 的步进和偏移参数](./book/lesson17/)
+
 ## 附录
 
 临时目录，后续再迁移到正文。
