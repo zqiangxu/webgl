@@ -51,4 +51,5 @@ gl.vertexAttribPointer(a_PointSize, 1, gl.FLOAT, false, fSize * 3, fSize * 2);
 最后再调用 `gl.enableVertexAttributeArray` 去开启变量即可。
 
 完整的流程如下：
+
 <img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson17/process.png?raw=true" width="800px"/>
