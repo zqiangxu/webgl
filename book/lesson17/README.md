@@ -32,7 +32,7 @@ gl.vertexAttribPointer(location, size, type, normalized, stride, offset);
 
 `stride` 表示的是在缓冲区对象中，单个顶点的所有数据（在这里就是顶点的坐标和大小）的字节数，也就是两个相邻的顶点之间的距离，即 **`步进参数`**。
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson17/stride-offset.png?raw=true" width="400px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson17/stride-offset.png?raw=true" width="600px"/>
 
 `offset` 表示的是当前考虑的数据项距离首个元素的距离，即 **`偏移参数`**。
 
@@ -50,4 +50,5 @@ gl.vertexAttribPointer(a_PointSize, 1, gl.FLOAT, false, fSize * 3, fSize * 2);
 
 最后再调用 `gl.enableVertexAttributeArray` 去开启变量即可。
 
+完整的流程如下：
 <img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson17/process.png?raw=true" width="800px"/>
