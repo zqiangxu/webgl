@@ -53,6 +53,8 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 
 17、[gl.vertexAttribPointer() 的步进和偏移参数](./book/lesson17/)
 
+18、[varying 变量](./book/lesson18/)
+
 ## 附录
 
 临时目录，后续再迁移到正文。
