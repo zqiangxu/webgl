@@ -66,3 +66,5 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 ## 学习资料
 
 1、[LearnOpenGL-CN](https://learnopengl-cn.readthedocs.io/zh/latest/)
+
+2、[浅墨的游戏编程](https://www.zhihu.com/column/game-programming)
