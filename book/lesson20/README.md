@@ -4,4 +4,4 @@
 
 ## 渲染管线
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson19/graphics-pipeline.png?raw=true" width="400px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson20/graphics-pipeline.png?raw=true" width="400px"/>
