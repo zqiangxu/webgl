@@ -17,6 +17,15 @@
 
 <img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson22/varying.png?raw=true" width="800px"/>
 
+```c++
+precision mediump float;
+
+varying vec4 v_Color; // 内插得到的颜色赋值给 v_Color
+void main() {
+    gl_FragColor = v_Color; // 再赋值给 gl_FragColor
+}
+```
+
 示例渲染结果：
 
 <img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson22/draw.png?raw=true" width="400px"/>
