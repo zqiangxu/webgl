@@ -26,3 +26,4 @@ void main() {
 
 <img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson21/draw.png?raw=true" width="400px"/>
 
+因此由于片元的颜色取决于它的坐标位置，所以自然地，片元颜色会随着片元位置逐渐变化，三角形呈现平滑的颜色渐变效果。
