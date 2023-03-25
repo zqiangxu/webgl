@@ -19,6 +19,10 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 编写着色器的语言又被称为 `着色器语言`。OpenGL ES 2.0 基于 OpenGL 着色器语言 (`GLSL`)。WebGL 基于 OpenGL ES 2.0，所以也是采用 GLSL ES 来编写着色器。
 
 ## 章节目录
+
+---
+
+### 基础
 1、[使用 Canvas 绘制一个矩形](./book/lesson1/)
 
 2、[WebGL 程序入门：清空绘图区](./book/lesson2/)
@@ -64,6 +68,9 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 22、[彩色三角形4：varying 变量的作用和内插过程](./book/lesson22/)
 
 23、[渲染管线 (译)](./book/lesson23/)
+
+---
+### 纹理与贴图
 
 
 ## 附录
