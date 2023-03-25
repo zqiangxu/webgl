@@ -1,7 +1,11 @@
-# 渲染管线 (译)
+# 彩色三角形
 
-原文链接：[An intro to modern OpenGL. Chapter 1: The Graphics Pipeline](https://duriansoftware.com/joe/an-intro-to-modern-opengl.-chapter-1:-the-graphics-pipeline)
+当我们把上一个例子中的 `gl.drawArrays(gl.POINTS, 0, 3);` 改成:
 
-## 渲染管线
+```javascript
+gl.drawArrays(gl.TRIANGLES, 0, 3);
+```
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson19/graphics-pipeline.png?raw=true" width="400px"/>
+此时我们发现，渲染的结果从之前独立的三个点变成了一个颜色平滑过度的三角形，为什么呢？
+
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson19/triangles.png?raw=true" width="500px"/>
