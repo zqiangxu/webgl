@@ -52,4 +52,4 @@ gl.vertexAttribPointer(a_PointSize, 1, gl.FLOAT, false, fSize * 3, fSize * 2);
 
 完整的流程如下：
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson17/process.png?raw=true" width="900px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson17/process.png?raw=true" width="1000px"/>

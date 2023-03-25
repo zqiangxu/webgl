@@ -47,4 +47,4 @@ gl_FragColor = v_Color;
 其余的传递参数就跟之前的一样，具体参考 [上一节](../lesson17/)。
 
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson18/process.png?raw=true" width="900px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson18/process.png?raw=true" width="1000px"/>

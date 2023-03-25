@@ -42,4 +42,4 @@ gl.enableVertexAttribArray(a_PointSize);
 
 使用两个缓冲区对象向顶点着色器中传输数据的流程如下：
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson16/process.png?raw=true" width="900px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson16/process.png?raw=true" width="1000px"/>

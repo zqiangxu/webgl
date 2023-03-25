@@ -16,7 +16,7 @@ uniform 变量传输给的是那些对于所有顶点都相同（或与顶点无
 
 3、向 attribute 变量传输数据。
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson5/process.png?raw=true" width="900px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson5/process.png?raw=true" width="1000px"/>
 
 ## 示例
 
