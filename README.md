@@ -72,3 +72,13 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 1、[LearnOpenGL-CN](https://learnopengl-cn.readthedocs.io/zh/latest/)
 
 2、[浅墨的游戏编程](https://www.zhihu.com/column/game-programming)
+
+3、[Learning Modern 3D Graphics Programming](https://nicolbolas.github.io/oldtut/index.html)
+
+4、[opengl-tutorial](http://www.opengl-tutorial.org/)
+
+5、[Open.gl/introduction](https://open.gl/transformations)
+
+6、[OpenGL Programming Guide](http://www.glprogramming.com/red/)
+
+7、[An intro to modern OpenGL. Table of Contents](https://duriansoftware.com/joe/an-intro-to-modern-opengl.-table-of-contents)
