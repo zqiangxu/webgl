@@ -31,4 +31,5 @@ gl.drawArrays(gl.TRIANGLES, 0, 3);
 
 这一步的主要过程就是将装配好的图形转化为片元。
 
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson19/process1.png?raw=true" width="1000px"/>
 
