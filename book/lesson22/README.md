@@ -17,3 +17,6 @@
 
 <img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson22/varying.png?raw=true" width="800px"/>
 
+示例渲染结果：
+
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/lesson22/draw.png?raw=true" width="400px"/>
