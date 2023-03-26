@@ -2,7 +2,7 @@
 
 如果我们需要创建一堵逼真的墙，如果试图创建多个三角形，指定他们的颜色和位置来模拟墙面，那么就会陷入繁琐和无意义的工作中。
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson01/wall.png?raw=true" width="400px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter2/lesson01/wall.png?raw=true" width="400px"/>
 
 
 ## 纹理映射
@@ -19,4 +19,4 @@
 
 纹理映射的作用就是根据纹理的图像，为之前光栅化后的每个片元图上合适的颜色，组成纹理图像的像素又被称为 `纹素 (texels, texture elements)`。每一个纹素的颜色都是使用 RGB 或 RGBA 格式编码。
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson01/texels.png?raw=true" width="600px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter2/lesson01/texels.png?raw=true" width="600px"/>
