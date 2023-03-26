@@ -19,4 +19,4 @@
 
 纹理映射的作用就是根据纹理的图像，为之前光栅化后的每个片元图上合适的颜色，组成纹理图像的像素又被称为 `纹素 (texels, texture elements)`。每一个纹素的颜色都是使用 RGB 或 RGBA 格式编码。
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chatper2/lesson01/texels.png" width="600px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter2/lesson01/texels.png" width="600px"/>
