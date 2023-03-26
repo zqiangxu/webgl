@@ -23,23 +23,23 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 ---
 
 ### 第一章：WebGL 入门
-1、[使用 Canvas 绘制一个矩形](./book/chapter1/lesson1/)
+01、[使用 Canvas 绘制一个矩形](./book/chapter1/lesson1/)
 
-2、[WebGL 程序入门：清空绘图区](./book/chapter1/lesson2/)
+02、[WebGL 程序入门：清空绘图区](./book/chapter1/lesson2/)
 
-3、[绘制一个点](./book/chapter1/lesson3/)
+03、[绘制一个点](./book/chapter1/lesson3/)
 
-4、[WebGL坐标系统](./book/chapter1/lesson4/)
+04、[WebGL坐标系统](./book/chapter1/lesson4/)
 
-5、[attribute变量 和 uniform变量](./book/chapter1/lesson5/)
+05、[attribute变量 和 uniform变量](./book/chapter1/lesson5/)
 
-6、[attribute变量实战: 鼠标点击绘制点](./book/chapter1/lesson6/)
+06、[attribute变量实战: 鼠标点击绘制点](./book/chapter1/lesson6/)
 
-7、[uniform变量实战: 改变颜色](./book/chapter1/lesson7/)
+07、[uniform变量实战: 改变颜色](./book/chapter1/lesson7/)
 
-8、[绘制多个点](./book/chapter1/lesson8/)
+08、[绘制多个点](./book/chapter1/lesson8/)
 
-9、[类型化数组](./book/chapter1/lesson9/)
+09、[类型化数组](./book/chapter1/lesson9/)
 
 10、[绘制一个三角形](./book/chapter1/lesson10/)
 
@@ -72,7 +72,7 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 ---
 ### 第二章：纹理与贴图
 
-1、[纹理和纹素](./book/chapter2/lesson1/)
+01、[纹理和纹素](./book/chapter2/lesson1/)
 
 ## 附录
 
