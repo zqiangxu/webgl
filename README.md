@@ -72,7 +72,7 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 ---
 ### 第二章：纹理与贴图
 
-01、[纹理和纹素](./book/chapter2/lesson1/)
+01、[纹理和纹素](./book/chapter2/lesson01/)
 
 ## 附录
 
