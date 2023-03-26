@@ -23,51 +23,51 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 ---
 
 ### 第一章：WebGL 入门
-1、[使用 Canvas 绘制一个矩形](./book/base/lesson1/)
+1、[使用 Canvas 绘制一个矩形](./book/chapter1/lesson1/)
 
-2、[WebGL 程序入门：清空绘图区](./book/base/lesson2/)
+2、[WebGL 程序入门：清空绘图区](./book/chapter1/lesson2/)
 
-3、[绘制一个点](./book/base/lesson3/)
+3、[绘制一个点](./book/chapter1/lesson3/)
 
-4、[WebGL坐标系统](./book/base/lesson4/)
+4、[WebGL坐标系统](./book/chapter1/lesson4/)
 
-5、[attribute变量 和 uniform变量](./book/base/lesson5/)
+5、[attribute变量 和 uniform变量](./book/chapter1/lesson5/)
 
-6、[attribute变量实战: 鼠标点击绘制点](./book/base/lesson6/)
+6、[attribute变量实战: 鼠标点击绘制点](./book/chapter1/lesson6/)
 
-7、[uniform变量实战: 改变颜色](./book/base/lesson7/)
+7、[uniform变量实战: 改变颜色](./book/chapter1/lesson7/)
 
-8、[绘制多个点](./book/base/lesson8/)
+8、[绘制多个点](./book/chapter1/lesson8/)
 
-9、[类型化数组](./book/base/lesson9/)
+9、[类型化数组](./book/chapter1/lesson9/)
 
-10、[绘制一个三角形](./book/base/lesson10/)
+10、[绘制一个三角形](./book/chapter1/lesson10/)
 
-11、[平移](./book/base/lesson11/)
+11、[平移](./book/chapter1/lesson11/)
 
-12、[旋转](./book/base/lesson12/)
+12、[旋转](./book/chapter1/lesson12/)
 
-13、[变换矩阵: 旋转](./book/base/lesson13/)
+13、[变换矩阵: 旋转](./book/chapter1/lesson13/)
 
-14、[变换矩阵: 平移](./book/base/lesson14/)
+14、[变换矩阵: 平移](./book/chapter1/lesson14/)
 
-15、[变换矩阵: 缩放](./book/base/lesson15/)
+15、[变换矩阵: 缩放](./book/chapter1/lesson15/)
 
-16、[将非坐标数据传入顶点着色器](./book/base/lesson16/)
+16、[将非坐标数据传入顶点着色器](./book/chapter1/lesson16/)
 
-17、[gl.vertexAttribPointer() 的步进和偏移参数](./book/base/lesson17/)
+17、[gl.vertexAttribPointer() 的步进和偏移参数](./book/chapter1/lesson17/)
 
-18、[顶点着色器 到 片元着色器 之间的数据传递: varying 变量](./book/base/lesson18/)
+18、[顶点着色器 到 片元着色器 之间的数据传递: varying 变量](./book/chapter1/lesson18/)
 
-19、[彩色三角形1：示例](./book/base/lesson19/)
+19、[彩色三角形1：示例](./book/chapter1/lesson19/)
 
-20、[彩色三角形2：图形装配 与 光栅化](./book/base/lesson20/)
+20、[彩色三角形2：图形装配 与 光栅化](./book/chapter1/lesson20/)
 
-21、[彩色三角形3：调用片元着色器 - 逐片元调用](./book/base/lesson21/)
+21、[彩色三角形3：调用片元着色器 - 逐片元调用](./book/chapter1/lesson21/)
 
-22、[彩色三角形4：varying 变量的作用和内插过程](./book/base/lesson22/)
+22、[彩色三角形4：varying 变量的作用和内插过程](./book/chapter1/lesson22/)
 
-23、[渲染管线 (译)](./book/base/lesson23/)
+23、[渲染管线 (译)](./book/chapter1/lesson23/)
 
 ---
 ### 第二章：纹理与贴图
@@ -77,11 +77,11 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 
 临时目录，后续再迁移到正文。
 
-1、[UBO](./book/base/appendix/ubo/)
+1、[UBO](./book/chapter1/appendix/ubo/)
 
-2、[WebGL Report](./book/base/appendix/report)
+2、[WebGL Report](./book/chapter1/appendix/report)
 
-3、[WebGL 与 离屏Canvas 结合](./book/base/appendix/offscreencanvas/)
+3、[WebGL 与 离屏Canvas 结合](./book/chapter1/appendix/offscreencanvas/)
 
 ## 学习资料
 
