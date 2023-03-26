@@ -16,7 +16,7 @@ uniform 变量传输给的是那些对于所有顶点都相同（或与顶点无
 
 3、向 attribute 变量传输数据。
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson5/process.png?raw=true" width="1000px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson05/process.png?raw=true" width="1000px"/>
 
 ## 示例
 
@@ -53,4 +53,4 @@ gl.vertexAttrib4f(location, v0, v1, v2, v3);
 ## OpenGL 函数命名规范
 OpenGL 中的函数名由三部分组成，`<基础函数名><参数个数><参数类型>` 组成, WebGL 同样遵循同样的规范。
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson5/func.png?raw=true" width="600px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson05/func.png?raw=true" width="600px"/>

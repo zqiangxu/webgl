@@ -23,23 +23,23 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 ---
 
 ### 第一章：WebGL 入门
-01、[使用 Canvas 绘制一个矩形](./book/chapter1/lesson1/)
+01、[使用 Canvas 绘制一个矩形](./book/chapter1/lesson01/)
 
-02、[WebGL 程序入门：清空绘图区](./book/chapter1/lesson2/)
+02、[WebGL 程序入门：清空绘图区](./book/chapter1/lesson02/)
 
-03、[绘制一个点](./book/chapter1/lesson3/)
+03、[绘制一个点](./book/chapter1/lesson03/)
 
-04、[WebGL坐标系统](./book/chapter1/lesson4/)
+04、[WebGL坐标系统](./book/chapter1/lesson04/)
 
-05、[attribute变量 和 uniform变量](./book/chapter1/lesson5/)
+05、[attribute变量 和 uniform变量](./book/chapter1/lesson05/)
 
-06、[attribute变量实战: 鼠标点击绘制点](./book/chapter1/lesson6/)
+06、[attribute变量实战: 鼠标点击绘制点](./book/chapter1/lesson06/)
 
-07、[uniform变量实战: 改变颜色](./book/chapter1/lesson7/)
+07、[uniform变量实战: 改变颜色](./book/chapter1/lesson07/)
 
-08、[绘制多个点](./book/chapter1/lesson8/)
+08、[绘制多个点](./book/chapter1/lesson08/)
 
-09、[类型化数组](./book/chapter1/lesson9/)
+09、[类型化数组](./book/chapter1/lesson09/)
 
 10、[绘制一个三角形](./book/chapter1/lesson10/)
 

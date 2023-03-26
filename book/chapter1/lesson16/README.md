@@ -1,6 +1,6 @@
 # 将非坐标数据传入顶点着色器
 
-在 [绘制多个点](../lesson8/) 中，绘制的点的大小是写死的 `gl_PointSize = 10.0;` ，如果每个顶点的 gl_PointSize 都不相同，应该怎么处理呢？
+在 [绘制多个点](../lesson08/) 中，绘制的点的大小是写死的 `gl_PointSize = 10.0;` ，如果每个顶点的 gl_PointSize 都不相同，应该怎么处理呢？
 
 ## 创建多个缓冲区对象
 
@@ -17,7 +17,7 @@ void main() {
 }
 ```
 
-在 JavaScript 同样的我们可以通过 类型化数组 Float32Array 向缓冲区中写入数据，完整的流程我们可以参考：[绘制多个点](../lesson8/)。
+在 JavaScript 同样的我们可以通过 类型化数组 Float32Array 向缓冲区中写入数据，完整的流程我们可以参考：[绘制多个点](../lesson08/)。
 ```javascript
 const a_PointSize = gl.getAttribLocation(gl.program, 'a_PointSize');
 const points = new Float32Array([

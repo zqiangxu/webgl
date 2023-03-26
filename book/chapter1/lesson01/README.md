@@ -20,4 +20,4 @@ context.fillRect(100, 10, 150, 150);
 
 ## canvas 的坐标系
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson1/coordinate.png?raw=true" width="400px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson01/coordinate.png?raw=true" width="400px"/>

@@ -24,7 +24,7 @@ const fSize = verticesSizes.BYTES_PER_ELEMENT;
 
 ## 步进参数和偏移参数
 
-获取到每个元素所占的字节数之后，就需要把缓冲区对象分配给 attribute 变量了。方法和之前一样，只是 `gl.vertexAttribPointer` 所需要传递的参数有所差别。根据 [第八节: 绘制多个点](../lesson8/) 我们知道
+获取到每个元素所占的字节数之后，就需要把缓冲区对象分配给 attribute 变量了。方法和之前一样，只是 `gl.vertexAttribPointer` 所需要传递的参数有所差别。根据 [第八节: 绘制多个点](../lesson08/) 我们知道
 ```javascript
 gl.vertexAttribPointer(location, size, type, normalized, stride, offset);
 ```

@@ -2,7 +2,7 @@
 
 使用 WebGL 绘制一个位于原点 (0.0, 0.0, 0.0) 处 20px 大小红色的点。
 
-之前在 2D canvas 中绘制一个矩形采用的方式是，[第一个示例](../lesson1/canvas.html)：
+之前在 2D canvas 中绘制一个矩形采用的方式是，[第一个示例](../lesson01/canvas.html)：
 
 ```javascript
 context.fillStyle = 'rgba(255, 0, 0, 1)';
@@ -33,7 +33,7 @@ WebGL 需要两种着色器: `顶点着色器` 和 `片元着色器`。
 
 调用 WebGL 相关的方法，顶点着色器 和 片元着色器 就会执行，在颜色缓冲区中进行绘制，此时就清空了绘图区，最后，颜色缓冲区的内容会自动在浏览器中的 canvas 中进行展示。
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson3/process.png?raw=true" width="1000px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson03/process.png?raw=true" width="1000px"/>
 
 可以看到如果需要在屏幕上绘制一个 10px 红色的点，它需要用到两种着色器：
 
@@ -59,7 +59,7 @@ void main() {
 
 在初始化着色器前，顶点着色器 和 片元着色器 都是空白的，我们需要将以字符串形式的着色器代码从 JavaScript 传给 WebGL，并建立着色器。
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson3/init.png?raw=true" width="1000px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson03/init.png?raw=true" width="1000px"/>
 
 着色器建立好后，顶点着色器先执行，它先对 `gl_Position` 和 `gl_PointSize` 进行赋值，并将他们传给 片元着色器，然后片元着色器再执行。
 

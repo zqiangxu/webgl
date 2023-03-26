@@ -4,11 +4,11 @@
 
 比如 Babylon 的第一个场景的网格示例 [Getting Started - Chapter 1 - First Scene](https://doc.babylonjs.com/features/introductionToFeatures/chap1/first_scene)。
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson8/sodaBottle.png?raw=true" width="200px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson08/sodaBottle.png?raw=true" width="200px"/>
 
 ## 前言
 
-在 [attribute变量实战: 鼠标点击绘制点](../lesson6/) 中，我们通过 for 循环调用 `gl.vertexAttrib3f` 向着色器传入一个点，然后再调用 `gl.drawArrays` 的方式将这个点绘制出来。
+在 [attribute变量实战: 鼠标点击绘制点](../lesson06/) 中，我们通过 for 循环调用 `gl.vertexAttrib3f` 向着色器传入一个点，然后再调用 `gl.drawArrays` 的方式将这个点绘制出来。
 
 ```javascript
 points.forEach((point) => {
@@ -32,7 +32,7 @@ WebGL 提供了一种很方便的机制，即 `缓冲区对象 (Buffer Object)`�
 
 缓冲区对象是 WebGL 系统中一块存储区，我们可以在缓冲区对象中保存想要绘制的所有顶点数据，如图所示，我们需要先创建一个缓冲区，然后向其中写入顶点数据，最后就可以一次性的向顶点着色器中传入多个顶点的 attribute 变量数据。
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson8/use-buffer.png?raw=true" width="1000px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson08/use-buffer.png?raw=true" width="1000px"/>
 
 ## 完整的流程
 
@@ -48,7 +48,7 @@ WebGL 提供了一种很方便的机制，即 `缓冲区对象 (Buffer Object)`�
 
 5、开启 attribute 变量 (gl.enableVertexAttribArray())。
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson8/steps.png?raw=true" width="1000px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson08/steps.png?raw=true" width="1000px"/>
 
 ### 1、创建缓冲区对象
 
@@ -59,11 +59,11 @@ const vertexBuffer = gl.createBuffer();
 
 创建前:
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson8/before-create.png?raw=true" width="1000px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson08/before-create.png?raw=true" width="1000px"/>
 
 创建后:
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson8/after-create.png?raw=true" width="1000px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson08/after-create.png?raw=true" width="1000px"/>
 
 创建后的缓冲区可以通过 `gl.deleteBuffer(buffer)` 删除掉。
 
@@ -87,7 +87,7 @@ gl.bindBuffer(target, buffer);
 | gl.ELEMENT_ARRAY_BUFFER | 表示缓冲区对象中包含了顶点的索引值 |
 
 执行完成后，WebGL 系统内部状态发生了改变。
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson8/bind-buffer.png?raw=true" width="1000px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson08/bind-buffer.png?raw=true" width="1000px"/>
 
 ### 3、向缓冲区中写入数据
 
@@ -119,7 +119,7 @@ gl.bufferData(target, data, usage);
 
 
 写入完成后系统内部的状态变成了下图所示：
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson8/buffer-data.png?raw=true" width="1000px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson08/buffer-data.png?raw=true" width="1000px"/>
 
 
 ### 4、将缓冲区对象分配给一个 attribute 变量
@@ -157,7 +157,7 @@ type 的详细说明:
 | gl.UNSIGNED_INT | 无符号整形, Uint32Array |
 | gl.FLOAT | 浮点型, Float32Array |
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson8/attrib-pointer.png?raw=true" width="1000px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson08/attrib-pointer.png?raw=true" width="1000px"/>
 
 ### 5、开启 attribute 变量
 
@@ -168,7 +168,7 @@ type 的详细说明:
 gl.enableVertexAttribArray(a_Position);
 ```
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson8/enable.png?raw=true" width="1000px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson08/enable.png?raw=true" width="1000px"/>
 
 需要注意的是：**函数的名称虽然似乎表示用来处理 `顶点数组` 的，但是实际确是处理缓冲区的**。
 

@@ -1,6 +1,6 @@
 # 绘制一个三角形 
 
-有了之前的学习，绘制一个三角形，只需要在 [绘制多个点](../lesson8/) 的基础上，将 `gl.drawArrays` 修改为：
+有了之前的学习，绘制一个三角形，只需要在 [绘制多个点](../lesson08/) 的基础上，将 `gl.drawArrays` 修改为：
 
 ```javascript
 gl.drawArrays(gl.TRIANGLES, 0, 3);

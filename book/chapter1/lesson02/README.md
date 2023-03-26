@@ -45,4 +45,4 @@ gl.clearColor(1.0, 0.0, 0.0, 1.0);
 
 ## 绘制结果
 
-<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson2/result.png?raw=true" width="400px"/>
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter1/lesson02/result.png?raw=true" width="400px"/>
