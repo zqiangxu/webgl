@@ -74,6 +74,8 @@ WebGL 学习，偏向0基础，本书大部分知识来源于 《WebGL 编程指
 
 01、[纹理和纹素](./book/chapter2/lesson01/)
 
+02、[WebGL中的纹理映射步骤](./book/chapter2/lesson02/)
+
 ## 附录
 
 临时目录，后续再迁移到正文。
