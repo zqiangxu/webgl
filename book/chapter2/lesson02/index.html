@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../utils/initShaders.js"></script>
+    <script src="../../utils/initTexture.js"></script>
+    <title>WebGL chapter02-lesson02</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="600" height="400" />
+
+    <!-- 顶点着色器 -->
+    <script id="shader-vs" type="x-shader/x-vertex">
+    attribute vec4 a_Position;
+    
+    attribute vec2 a_TexCoord;
+    varying vec2 v_TexCoord;
+
+    void main(){
+        gl_Position = a_Position;
+        v_TexCoord = a_TexCoord;
+    }   
+    </script>
+
+    <!-- 片元着色器 -->
+    <script id="shader-fs" type="x-shader/x-fragment">
+    precision mediump float;
+
+    uniform sampler2D u_Sampler;
+    varying vec2 v_TexCoord;
+
+    void main() {
+        gl_FragColor = texture2D(u_Sampler, v_TexCoord);
+    }
+    </script>
+
+    <script type="text/javascript">
+        const canvas = document.getElementById('canvas');
+        const gl = canvas.getContext('webgl');
+
+        const vShader = document.getElementById('shader-vs').innerHTML;
+        const fShader = document.getElementById('shader-fs').innerHTML;
+
+        // 初始化着色器
+        initShaders(gl, vShader, fShader);
+        gl.clearColor(0.0, 0.0, 0.0, 1.0);
+        gl.clear(gl.COLOR_BUFFER_BIT);
+
+        var vertexTexCoords = new Float32Array([
+            // 顶点坐标，纹理坐标
+            -0.5, 0.5, 0.0, 1.0,
+            -0.5, -0.5, 0.0, 0.0,
+            0.5, 0.5, 1.0, 1.0,
+            0.5, -0.5, 1.0, 0.0
+        ]);
+
+        // 创建缓冲区对象
+        const vertexTexCoordBuffer = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, vertexTexCoordBuffer);
+        gl.bufferData(gl.ARRAY_BUFFER, vertexTexCoords, gl.STATIC_DRAW);
+
+        const FSIZE = vertexTexCoordBuffer.BYTES_PRE_ELEMENT;
+
+        const a_Position = gl.getAttribLocation(gl.program, 'a_Position');
+        gl.vertexAttribPointer(a_Position, 2, gl.FLOAT, false, FSIZE * 4, 0);
+        gl.enableVertexAttribArray(a_Position);
+
+        const a_TexCoord = gl.getAttribLocation(gl.program, 'a_TexCoord');
+        gl.vertexAttribPointer(a_TexCoord, 2, gl.FLOAT, false, FSIZE * 4, FSIZE * 2);
+        gl.enableVertexAttribArray(a_TexCoord); 
+
+        initTextures(gl, 4, 'sky.png');
+    </script>
+</body>
+
+</html>

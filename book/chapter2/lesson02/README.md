@@ -9,3 +9,5 @@
 3、加载纹理图像，对其进行一下配置，以在 WebGL 中使用它。
 
 4、在片元着色器中将相应的纹素从纹理中抽取出来，并将纹素的颜色赋给片元。
+
+<img src="https://github.com/zqiangxu/webgl/blob/main/assets/book/chapter2/lesson02/sky.png" width="400px"/>
